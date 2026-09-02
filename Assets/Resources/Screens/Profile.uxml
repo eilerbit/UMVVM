@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="../Shell/AppShell.uss" />
+    <ui:VisualElement class="screen">
+        <ui:Label text="SERVICE EXAMPLE" class="eyebrow" />
+        <ui:Label text="Profile" class="title" />
+        <ui:Label text="ProfileViewModel talks to IUserService. UserService talks to IHttpAdapter. Replace the mock adapter with UnityWebRequest, Refit, gRPC, or another external client without changing UI code." class="subtitle" />
+        <ui:VisualElement class="card">
+            <ui:Label name="loading" text="Loading mock backend…" class="muted">
+                <Bindings>
+                    <ui:DataBinding property="visible" data-source-path="IsLoading" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Name" class="field-label" />
+            <ui:Label name="profile-name" class="field-value">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Name" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Role" class="field-label" />
+            <ui:Label name="profile-role" class="field-value">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Role" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <ui:Label text="Email" class="field-label" />
+            <ui:Label name="profile-email" class="field-value">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Email" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

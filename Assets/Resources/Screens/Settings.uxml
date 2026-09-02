@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="../Shell/AppShell.uss" />
+    <ui:VisualElement class="screen">
+        <ui:Label text="TWO-LEVEL SERVICES" class="eyebrow" />
+        <ui:Label text="Settings" class="title" />
+        <ui:Label text="NotificationService is application-facing functionality. It composes IHttpAdapter and IPushAdapter, which isolate external packages/protocols from the application." class="subtitle" />
+        <ui:VisualElement class="card">
+            <ui:Label text="Notifications" class="card-title" />
+            <ui:VisualElement class="notification-controls">
+                <ui:Button name="notifications-button" text="Disable notifications" class="primary-button notification-button">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="NotificationActionText" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Button>
+                <ui:VisualElement name="notifications-status" class="status-indicator status-indicator--enabled">
+                    <ui:VisualElement class="status-indicator__dot" />
+                    <ui:Label name="notifications-status-label" text="Enabled" class="status-indicator__label">
+                        <Bindings>
+                            <ui:DataBinding property="text" data-source-path="NotificationStatusText" binding-mode="ToTarget" />
+                        </Bindings>
+                    </ui:Label>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

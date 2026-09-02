@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="../Shell/AppShell.uss" />
+    <ui:VisualElement class="screen">
+        <ui:Label text="REFERENCE IMPLEMENTATION" class="eyebrow" />
+        <ui:Label text="A WPF-inspired MVVM baseline for Unity" class="title" />
+        <ui:Label text="UI Toolkit native bindings project ViewModel state into UXML, R3 carries reactive application flows, VContainer composes the graph, and application Services depend on external Adapters." class="subtitle" />
+        <ui:VisualElement class="card">
+            <ui:Label text="Native runtime data binding" class="card-title" />
+            <ui:Label text="Counter is exposed by HomeViewModel. UXML binds Label.text declaratively; the Binder only assigns the data source and wires commands." class="muted" />
+            <ui:Label name="counter-value" text="0" class="value">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="Counter" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+            <ui:Button name="increment-button" text="Increment counter" class="primary-button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="card">
+            <ui:Label text="Global navigation" class="card-title" />
+            <ui:Label text="Navigation remains reactive application state. Screens are created and disposed inside one persistent shell." class="muted" />
+            <ui:Button name="profile-button" text="Open profile via ViewModel" class="primary-button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

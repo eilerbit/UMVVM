@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="AppShell.uss" />
+    <ui:VisualElement class="app-shell">
+        <ui:VisualElement class="sidebar">
+            <ui:Label text="UMVVM" class="brand" />
+            <ui:Label text="Unity MVVM starter" class="brand-subtitle" />
+            <ui:Button name="nav-home" text="Home" class="nav-button" />
+            <ui:Button name="nav-profile" text="Profile" class="nav-button" />
+            <ui:Button name="nav-settings" text="Settings" class="nav-button" />
+            <ui:VisualElement class="sidebar-spacer" />
+            <ui:Label text="Unity 6.6 · UI Toolkit · R3 · VContainer" class="stack-label" />
+        </ui:VisualElement>
+        <ui:VisualElement class="content">
+            <ui:VisualElement class="topbar">
+                <ui:Label text="MVVM Architecture Demo" class="topbar-title" />
+                <ui:Label text="Service → Adapter boundaries" class="topbar-badge" />
+            </ui:VisualElement>
+            <ui:VisualElement name="screen-host" class="screen-host" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
